@@ -13,12 +13,11 @@
     <version>1.0</version>
     <name>stoom-store</name>
     <description>Stoom Store Test</description>
-
-
     <properties>
         <java.version>1.8</java.version>
+        <junit.jupiter.version>5.7.0</junit.jupiter.version>
+        <mockito.version>3.6.28</mockito.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -42,17 +41,30 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -61,5 +73,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

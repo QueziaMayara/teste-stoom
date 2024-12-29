@@ -1,6 +1,5 @@
 package br.com.stoom.store.model;
 
-import br.com.stoom.store.model.dto.CategoryDTO;
 import br.com.stoom.store.model.dto.ProductDTO;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,6 +11,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product_sequence")
     @SequenceGenerator(name = "product_sequence", sequenceName = "PRODUCT_SEQ")
@@ -39,7 +39,6 @@ public class Product {
     private String description;
 
     public Product() {
-
     }
 
     public Product(ProductDTO productDTO, Category category, Brand brand) {

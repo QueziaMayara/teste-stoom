@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 @Setter
 @NoArgsConstructor
 public class ProductDTO {
+
     private Long id;
     private String description;
     private boolean active;

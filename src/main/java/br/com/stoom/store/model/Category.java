@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class Category {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_sequence")
     @SequenceGenerator(name = "category_sequence", sequenceName = "CATEGORY_SEQ")
@@ -23,7 +24,6 @@ public class Category {
     private boolean active;
 
     public Category() {
-
     }
 
     public Category(CategoryDTO categoryDTO) {

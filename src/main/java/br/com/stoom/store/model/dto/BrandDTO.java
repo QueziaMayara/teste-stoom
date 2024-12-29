@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class BrandDTO {
+
     private Long id;
     private String description;
     private boolean active;

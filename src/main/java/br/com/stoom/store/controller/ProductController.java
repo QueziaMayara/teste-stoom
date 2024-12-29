@@ -20,11 +20,7 @@ public class ProductController {
 
     @GetMapping()
     public ResponseEntity<List<Product>> findAll() {
-        List<Product> p = productService.findAll();
-        if(!p.isEmpty())
-            return new ResponseEntity<>(p, HttpStatus.OK);
-        else
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(productService.findAll(), HttpStatus.OK);
     }
 
     @PostMapping()
